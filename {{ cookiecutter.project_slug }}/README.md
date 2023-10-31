@@ -28,9 +28,7 @@
 Project setup requirements:
 
 - Gradle
-- Groovy
 - Kotlin
-- Spock
 - Spring
 - H2
 - Swagger-Springdoc
