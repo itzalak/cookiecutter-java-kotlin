@@ -1,0 +1,13 @@
+{
+  "project_name": "cookiecutter-base",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "description": "generic-project-description",
+  "release_please": [
+    "y",
+    "n"
+  ],
+  "_copy_without_render": [
+    ".cz.toml",
+    ".github/workflows/bumpversion.yaml"
+  ]
+}
