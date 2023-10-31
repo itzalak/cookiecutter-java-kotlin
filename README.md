@@ -27,7 +27,7 @@ In `Settings > Actions > General` find `Workflow permissions` and update
 To create a repository using a cookie cookiecutter template
 
 ```shell
-cookiecutter https://github.com/simao-ferreira/cookiecutter-base.git
+cookiecutter https://github.com/simao-ferreira/cookiecutter-kotlin.git
 ```
 
 ## Cookiecutter
