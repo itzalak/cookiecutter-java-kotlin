@@ -38,6 +38,7 @@ repos:
           - --config
           - .markdownlint.yaml
           - --fix
+        exclude: '^(CHANGELOG.md)$'
 
   - repo: https://github.com/jguttman94/pre-commit-gradle
     rev: v0.3.0
