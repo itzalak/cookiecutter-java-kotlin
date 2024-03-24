@@ -1,3 +1,9 @@
+## v0.1.4 (2024-03-24)
+
+### Patch
+
+- Maintenance update
+
 ## v0.1.3 (2024-01-23)
 
 ### Patch
