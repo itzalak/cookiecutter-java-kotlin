@@ -1,3 +1,9 @@
+## v0.1.5 (2024-05-09)
+
+### Changed
+
+- Update template dependencies
+
 ## v0.1.4 (2024-03-24)
 
 ### Patch
