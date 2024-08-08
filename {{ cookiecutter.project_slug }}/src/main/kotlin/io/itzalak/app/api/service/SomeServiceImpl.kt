@@ -1,6 +1,6 @@
-package io.sf.app.api.service
+package io.itzalak.app.api.service
 
-import io.sf.app.api.service.SomeService
+import io.itzalak.app.api.service.SomeService
 import org.springframework.stereotype.Service
 
 @Service

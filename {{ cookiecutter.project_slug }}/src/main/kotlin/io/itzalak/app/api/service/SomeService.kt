@@ -1,4 +1,4 @@
-package io.sf.app.api.service
+package io.itzalak.app.api.service
 
 interface SomeService {
 

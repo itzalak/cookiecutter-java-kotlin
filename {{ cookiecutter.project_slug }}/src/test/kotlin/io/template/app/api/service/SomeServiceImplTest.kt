@@ -1,6 +1,6 @@
-package io.sf.app.api.service
+package io.itzalak.app.api.service
 
-import io.sf.app.api.service.SomeServiceImpl
+import io.itzalak.app.api.service.SomeServiceImpl
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith

@@ -1,6 +1,6 @@
-package io.sf.app.api.controller.v1
+package io.itzalak.app.api.controller.v1
 
-import io.sf.app.api.controller.v1.ApiController
+import io.itzalak.app.api.controller.v1.ApiController
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired

@@ -6,7 +6,7 @@ spring:
   datasource:
     url: jdbc:h2:mem:mydb
     driver-class-name: org.h2.Driver
-    username: sa 
+    username: sa
     password: password
   jpa:
     hibernate:
@@ -16,7 +16,7 @@ spring:
 logging:
   level:
   org.springframework: INFO
-  io.sf.app: DEBUG
+  io.itzalak.app: DEBUG
 
 #https://springdoc.org/v2/#properties
 springdoc:

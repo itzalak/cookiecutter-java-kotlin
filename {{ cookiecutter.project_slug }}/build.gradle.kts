@@ -6,7 +6,7 @@ plugins {
     groovy
 }
 
-group = "io.sf"
+group = "io.itzalak"
 version = "0.1.0"
 java.sourceCompatibility = JavaVersion.VERSION_17
 

@@ -1,3 +1,3 @@
-package io.sf
+package io.itzalak
 
 internal class KotlinMainTest

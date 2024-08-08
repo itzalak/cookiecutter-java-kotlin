@@ -1,4 +1,4 @@
-package io.sf.app.api.controller.v1
+package io.itzalak.app.api.controller.v1
 
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.responses.ApiResponse
