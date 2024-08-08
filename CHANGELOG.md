@@ -1,3 +1,9 @@
+## v0.1.7 (2024-08-08)
+
+### Changed
+
+- Update folders names
+
 ## v0.1.6 (2024-08-08)
 
 ### Tools
