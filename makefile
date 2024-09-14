@@ -25,16 +25,28 @@ VENV := .venv
 # Default
 ###############################################################################
 
+###############################################################################
+# Default
+###############################################################################
+
 .PHONY: help
 help:
-	@echo "\n|> Directory: ${ROOT_DIR}"
+	@echo "|> Directory: ${ROOT_DIR}"
 	@echo "|> OS: ${OS}"
-	@echo "|> Available targets:\n"
-	@make -qpRr | egrep -e '^[a-z].*:$$' | sed -e 's~:~~g' | sort
+	@echo "|> Available targets:"
+	@make -qpRr | grep -E '^[a-z].*:$$' | sed -e 's~:~~g' | sort
 
 .PHONY: all
-all: clean poetry-install pre-commit
-	@$(call warn, init config)
+all: clean install
+	@$(call warn, all)
+
+.PHONY: install
+install: poetry-setup pre-commit-setup
+	@$(call warn, setup)
+
+.PHONY: update
+update: poetry-update pre-commit-update
+	@$(call warn, update)
 
 .PHONY: test
 test: poetry-test
@@ -72,6 +84,7 @@ poetry-get-env:
 poetry-update:
 	@$(call warn, update poetry dependencies)
 	poetry update
+	poetry self update
 	@$(call log, poetry dependencies update)
 
 poetry-test:

@@ -1,23 +1,18 @@
-package io.itzalak.app.api.service
+package io.template.app.api.service
 
-import io.itzalak.app.api.service.SomeServiceImpl
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
-import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.test.context.junit.jupiter.SpringExtension
 
-@SpringBootTest
-@ExtendWith(SpringExtension::class)
-class SomeServiceImplTest(
-    @Autowired private val service: SomeServiceImpl
-) {
+class SomeServiceImplTest {
     @Test
-    fun `get expected response`() {
-        //when
-        val result = service.someMethodReturningString()
-        //then
-        assertEquals(result, "some response!")
+    fun `someMethodReturningString should return expected response`() {
+        // Given
+        val someService = SomeServiceImpl()
+
+        // When
+        val result = someService.someMethodReturningString()
+
+        // Then
+        assertEquals("some response!", result)
     }
 }

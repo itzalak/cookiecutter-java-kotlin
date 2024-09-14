@@ -27,22 +27,32 @@ VENV := .venv
 
 .PHONY: help
 help:
-	@echo "\n|> Directory: ${ROOT_DIR}"
+	@echo "|> Directory: ${ROOT_DIR}"
 	@echo "|> OS: ${OS}"
-	@echo "|> Available targets:\n"
-	@make -qpRr | egrep -e '^[a-z].*:$$' | sed -e 's~:~~g' | sort
+	@echo "|> Available targets:"
+	@make -qpRr | grep -E '^[a-z].*:$$' | sed -e 's~:~~g' | sort
 
 .PHONY: all
-all: clean pre-commit
-	@$(call warn, init config)
+all: clean install
+	@$(call warn, all)
+
+.PHONY: install
+install: pre-commit-setup
+	@$(call warn, setup)
+
+.PHONY: update
+update: pre-commit-update
+	@$(call warn, update)
 
 .PHONY: test
 test:
-	@$(call warn, dummy)
+	@$(call warn, test)
+	./gradew test
 
 .PHONY: clean
 clean:
-	@$(call warn, dummy)
+	@$(call warn, clean)
+	@$(call log, dummy call)
 
 ###############################################################################
 # Pre commit

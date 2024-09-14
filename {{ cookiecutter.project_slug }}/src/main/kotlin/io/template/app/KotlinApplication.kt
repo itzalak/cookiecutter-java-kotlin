@@ -1,4 +1,4 @@
-package io.itzalak.app
+package io.template.app
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

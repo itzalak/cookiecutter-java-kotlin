@@ -1,4 +1,4 @@
-package io.itzalak.app.api.controller.v1
+package io.template.app.api.controller.v1
 
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.responses.ApiResponse
@@ -13,17 +13,16 @@ import org.springframework.web.bind.annotation.RestController
 @ApiResponse(responseCode = "500", description = "Internal server error, this should not happen")
 @Tag(name = "Api Controller", description = "Some endpoint")
 class ApiController {
-
     @Operation(
         method = "GET",
         summary = "Returns 'successful' string",
     )
     @ApiResponse(
         responseCode = "200",
-        description = "Successful returned"
+        description = "Successful returned",
     )
     @GetMapping("endpoint/{id}")
-    fun getEndpoint(@PathVariable id: Long): String {
-        return "Successful"
-    }
+    fun getEndpoint(
+        @PathVariable id: Long,
+    ): String = "Successful"
 }

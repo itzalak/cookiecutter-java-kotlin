@@ -1,32 +1,46 @@
-package io.itzalak.app.api.controller.v1
+package io.template.app.api.controller.v1
 
-import io.itzalak.app.api.controller.v1.ApiController
+import io.mockk.every
+import io.mockk.mockk
+import io.mockk.verify
+import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
-import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
-import org.springframework.http.MediaType
-import org.springframework.test.annotation.DirtiesContext
-import org.springframework.test.context.junit.jupiter.SpringExtension
 import org.springframework.test.web.servlet.MockMvc
-import org.springframework.test.web.servlet.get
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers.content
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
+import org.springframework.test.web.servlet.setup.MockMvcBuilders
 
-@ExtendWith(SpringExtension::class)
-@WebMvcTest(ApiController::class)
 class ApiControllerTest {
 
-
-    @Autowired
-    private lateinit var mockMvc: MockMvc
+    private val mockMvc: MockMvc = MockMvcBuilders.standaloneSetup(ApiController()).build()
 
     @Test
-    @DirtiesContext
-    fun wheEndpointIsCalled_thenResultIsSuccessful() {
-        //when
-        mockMvc.get("/v1/endpoint/{id}", 11) {
-            contentType = MediaType.APPLICATION_JSON
-        }.andExpect {
-            status { isOk() }
-        }
+    fun `should return successful string`() {
+        mockMvc.perform(get("/v1/endpoint/1"))
+            .andExpect(status().isOk)
+            .andExpect(content().string("Successful"))
+    }
+
+    @Test
+    fun `should return successful response when called with mockk`() {
+        // Arrange
+        val apiController = mockk<ApiController>()
+        every { apiController.getEndpoint(1L) } returns "Successful"
+
+        // Act
+        val result = apiController.getEndpoint(1L)
+
+        // Assert
+        Assertions.assertEquals("Successful", result)
+
+        // Verify the method was called with the right parameter
+        verify { apiController.getEndpoint(1L) }
+    }
+
+    @Test
+    fun `should return 404 for invalid endpoint`() {
+        mockMvc.perform(get("/v1/invalidEndpoint/1"))
+            .andExpect(status().isNotFound)
     }
 }

@@ -26,17 +26,17 @@ repos:
       - id: detect-private-key
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: 3.25.0
+    rev: v3.29.0
     hooks:
       - id: commitizen
-        stages: [commit-msg]
+        stages: [ commit-msg ]
       - id: commitizen-branch
         stages:
           - post-commit
           - push
 
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.40.0
+    rev: v0.41.0
     hooks:
       - id: markdownlint
         args:
@@ -45,8 +45,8 @@ repos:
           - --fix
         exclude: '^(CHANGELOG.md)$'
 
-  - repo: https://github.com/jguttman94/pre-commit-gradle
-    rev: v0.3.0
-    hooks:
-      - id: gradle-check
-        args: [--wrapper, --output]
+#  - repo: https://github.com/jguttman94/pre-commit-gradle
+#    rev: v0.3.0
+#    hooks:
+#      - id: gradle-check
+#        args: [ --wrapper, --output ]

@@ -15,8 +15,8 @@ spring:
 
 logging:
   level:
-  org.springframework: INFO
-  io.itzalak.app: DEBUG
+    org.springframework: INFO
+    io.template.app: DEBUG
 
 #https://springdoc.org/v2/#properties
 springdoc:
