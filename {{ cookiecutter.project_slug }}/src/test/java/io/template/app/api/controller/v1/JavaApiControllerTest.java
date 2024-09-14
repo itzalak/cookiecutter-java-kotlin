@@ -30,7 +30,7 @@ public class JavaApiControllerTest {
     @Test
     void getEndpoint_shouldReturnSuccessfulResponse() throws Exception {
         // When + Then
-        mockMvc.perform(get("/v1/endpoint/1"))
+        mockMvc.perform(get("/v0/endpoint/1"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Successful"));
     }
@@ -38,14 +38,14 @@ public class JavaApiControllerTest {
     @Test
     void getEndpoint_shouldReturn404ForInvalidUrl() throws Exception {
         // When + Then
-        mockMvc.perform(get("/v1/invalidEndpoint/1"))
+        mockMvc.perform(get("/v0/invalidEndpoint/1"))
                 .andExpect(status().isNotFound());
     }
 
     @Test
     void getEndpoint_shouldReturnCorrectResponseEntity() throws Exception {
         // Perform the GET request
-        mockMvc.perform(get("/v1/endpoint/1"))
+        mockMvc.perform(get("/v0/endpoint/1"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Successful"));
     }

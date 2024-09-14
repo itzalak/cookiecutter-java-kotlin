@@ -13,7 +13,7 @@ public class JavaOpenApiConfigTest {
         JavaOpenApiConfig config = new JavaOpenApiConfig();
 
         // When
-        OpenAPI openAPI = config.apiV1();
+        OpenAPI openAPI = config.apiV0();
 
         // Then
         assertThat(openAPI).isNotNull();

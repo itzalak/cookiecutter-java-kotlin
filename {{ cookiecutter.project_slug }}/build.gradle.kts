@@ -33,10 +33,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     runtimeOnly("com.h2database:h2")
 
-    // Kotlin
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(module = "mockito-core")
     }
+    // Kotlin
     testImplementation("io.mockk:mockk:${mockkVersion}")
     testImplementation("com.ninja-squad:springmockk:${springMockkVersion}")
 
@@ -46,11 +46,7 @@ dependencies {
     testImplementation("org.spockframework:spock-spring:${spockVersion}")
 
     // Java
-    testImplementation("org.assertj:assertj-core")
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testImplementation("org.springframework:spring-test")
-    testImplementation("org.springframework:spring-web")
-    testImplementation("org.mockito:mockito-core")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
 tasks {
