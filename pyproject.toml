@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cookiecutter-python"
-version = "v0.1.8"
+version = "v0.1.9"
 description = "Cookiecutter template for my kotlin projects"
 authors = ["Itzalak <itzalak@tuta.io>"]
 license = ""
@@ -22,7 +22,7 @@ build-backend = "poetry.core.masonry.api"
 name = "cz_customize"
 tag_format = "v$major.$minor.$patch"
 version_scheme = "semver"
-version = "0.1.8"
+version = "0.1.9"
 update_changelog_on_bump = true
 version_files = ["pyproject.toml"]
 

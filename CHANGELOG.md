@@ -1,3 +1,9 @@
+## v0.1.9 (2024-09-14)
+
+### Fixed
+
+- Correct api naming for java
+
 ## v0.1.8 (2024-09-14)
 
 ### Changed
