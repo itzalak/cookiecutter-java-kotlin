@@ -1,3 +1,9 @@
+## v0.1.8 (2024-09-14)
+
+### Changed
+
+- Introduce java, refactor, update dependencies
+
 ## v0.1.7 (2024-08-08)
 
 ### Changed
