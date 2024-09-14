@@ -1,3 +1,9 @@
+## v0.1.10 (2024-09-14)
+
+### Changed
+
+- Update versioning
+
 ## v0.1.9 (2024-09-14)
 
 ### Fixed
