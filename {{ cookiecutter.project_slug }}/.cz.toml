@@ -4,6 +4,9 @@ tag_format = "v$major.$minor.$patch"
 version_scheme = "semver"
 version = "0.1.0"
 update_changelog_on_bump = true
+version_files = [
+  "project-version.gradle",
+]
 
 [tool.commitizen.customize]
 schema = "<type>: <body>"
